@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloController {
 
 	@RequestMapping("/")
-	public String index(@RequestParam(value="username", defaultValue="everyone") String username)  {
-		return String.format("Greetings %s from Spring Boot + Tanzu!",username);
+	public String index() {
+		return "Greetings from Spring Boot + Tanzu!";
 	}
+	// public String index(@RequestParam(value="username", defaultValue="everyone") String username)  {
+	// 	return String.format("Greetings %s from Spring Boot + Tanzu!",username);
+	// }
 
 }
